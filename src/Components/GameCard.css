@@ -1,0 +1,41 @@
+.Game__Cards .de-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Game__Cards .de-item .d-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Game__Cards .de-item:hover .d-overlay {
+  opacity: 1;
+}
+
+.Game__Cards .de-item .d-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.Game__Cards .de-item img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.Game__Cards .de-item:hover img {
+  transform: scale(1.1);
+}
